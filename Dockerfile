@@ -16,4 +16,4 @@ RUN apk update \
   && apk del alpine-sdk gcc gnupg musl-dev make linux-headers zlib-dev openssl-dev musl-dev \
   && rm -rf /var/cache/apk/*
 
-RUN source ~/.rvm/scripts/rvm
+RUN source /root/.rvm/scripts/rvm
