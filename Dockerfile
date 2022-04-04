@@ -6,7 +6,7 @@ LABEL maintainer="IASC ebossicarranza@frba.utn.edu.ar"
 ENV RVM_USER root
 ENV RVM_GROUP rvm
 
-ENV RVM_DEPS bzip2 apt-utils gawk g++ gcc autoconf automake bison git curl gnupg2 htop procps apache2-utils make pkg-config sqlite3 libgmp-dev  
+ENV RVM_DEPS openjdk-11-jdk-headless bzip2 apt-utils gawk g++ gcc autoconf automake bison git curl gnupg2 htop procps apache2-utils make pkg-config sqlite3 libgmp-dev  
 ENV RVM_DEPS_DEV libc6-dev libffi-dev libgdbm-dev libncurses5-dev libsqlite3-dev libssl-dev libreadline6-dev zlib1g-dev libtool libyaml-dev
 
 # update package lists
