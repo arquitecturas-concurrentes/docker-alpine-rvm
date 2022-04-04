@@ -14,7 +14,7 @@ on:
   pull_request:
 
 env:
-  IMAGE_NAME: iasc-rvm-alpine
+  IMAGE_NAME: iasc-rvm-debian-slim
 
 jobs:
   # Push image to GitHub Packages.
