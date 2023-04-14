@@ -6,7 +6,7 @@ LABEL maintainer="IASC ebossicarranza@frba.utn.edu.ar"
 ENV RVM_USER root
 ENV RVM_GROUP rvm
 
-ENV RVM_DEPS openjdk-11-jdk-headless bzip2 apt-utils gawk g++ gcc autoconf automake bison git curl gnupg2 htop procps apache2-utils make pkg-config sqlite3 libgmp-dev  
+ENV RVM_DEPS openjdk-17-jdk-headless bzip2 apt-utils gawk g++ gcc autoconf automake bison git curl gnupg2 htop procps apache2-utils make pkg-config sqlite3 libgmp-dev  
 ENV RVM_DEPS_DEV libc6-dev libffi-dev libgdbm-dev libncurses5-dev libsqlite3-dev libssl-dev libreadline6-dev zlib1g-dev libtool libyaml-dev
 
 # update package lists
@@ -24,7 +24,7 @@ RUN gpg2 --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A17031138
 RUN echo "rvm_install_on_use_flag=1\nrvm_gemset_create_on_use_flag=1\nrvm_quiet_curl_flag=1" > ~/.rvmrc
 
 # preinstall some ruby versions
-ENV PREINSTALLED_RUBIES "3.0.0"
+ENV PREINSTALLED_RUBIES "3.2.2"
 RUN /bin/bash -l -c 'for version in $PREINSTALLED_RUBIES; do echo "Now installing Ruby $version"; rvm install $version; rvm cleanup all; done'
 
 # disable strict host key checking (used for deploy)
