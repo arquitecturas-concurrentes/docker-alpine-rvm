@@ -24,7 +24,7 @@ RUN gpg2 --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A17031138
 RUN echo "rvm_install_on_use_flag=1\nrvm_gemset_create_on_use_flag=1\nrvm_quiet_curl_flag=1" > ~/.rvmrc
 
 # preinstall some ruby versions
-ENV PREINSTALLED_RUBIES "3.2.2"
+ENV PREINSTALLED_RUBIES "3.3.0"
 RUN /bin/bash -l -c 'for version in $PREINSTALLED_RUBIES; do echo "Now installing Ruby $version"; rvm install $version; rvm cleanup all; done'
 
 # disable strict host key checking (used for deploy)
